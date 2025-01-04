@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en" class="tw-light">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AI-Powered B2B Lead Generation - Radius</title>
+        <meta name="description" content="Automate your B2B lead generation and qualification with AI" />
+        <link
+            rel="shortcut icon"
+            href="./assets/logo/logo.png"
+            type="image/x-icon"
+        />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:title" content="AI-Powered B2B Lead Generation - Radius" />
+        <meta property="og:description" content="Automate your B2B lead generation and qualification with AI" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://radius.ai" />
+        <meta property="og:image" content="" />
+
+        <!-- <link rel="stylesheet" href="css/tailwind-runtime.css" /> -->
+        <link rel="stylesheet" href="css/tailwind-build.css">
+        <link rel="stylesheet" href="css/index.css" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+            integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-');
+        </script>
+
+    </head>
+    <body
+        class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fcfcfc] 
+            tw-text-black dark:tw-bg-black  dark:tw-text-white"
+    >
+
+        <!-- <div class="tw-absolute tw-top-0 tw-left-1/2 tw--translate-x-1/2 tw-flex 
+                    tw-h-[100px] tw-w-full tw-max-w-[80%]">
+            <div class="header-gradient tw-h-full tw-w-full "></div>
+        </div> -->
+
+        <header
+            class="lg:tw-px-4 tw-max-w-[100vw] tw-max-w-lg:tw-mr-auto max-lg:tw-top-0 tw-fixed tw-top-4 lg:tw-left-1/2 lg:tw--translate-x-1/2 tw-z-20 tw-flex tw-h-[60px] tw-w-full 
+                    tw-text-gray-700 tw-bg-white dark:tw-text-gray-200 dark:tw-bg-[#17181b] tw-px-[3%] tw-rounded-md lg:tw-max-w-5xl tw-shadow-md dark:tw-shadow-gray-700
+                    lg:tw-justify-around lg:!tw-backdrop-blur-lg lg:tw-opacity-[0.99]"
+        >
+
+            <a class="tw-flex tw-p-[4px] tw-gap-2 tw-place-items-center" href="#">
+               
+
+                <div class="tw-h-[50px] tw-max-w-[250px]">
+                    <img
+                        src="./assets/logo/logo3.png"
+                        alt="Radius"
+                        class="tw-object-contain tw-h-full tw-w-full dark:tw-invert"
+                    />
+                </div>
+                <span class="tw-uppercase tw-text-base tw-font-medium"></span>
+            </a>
+            <div
+                class="collapsible-header animated-collapse max-lg:tw-shadow-md"
+                id="collapsed-header-items"
+            >
+                <nav
+                    class="tw-relative tw-flex tw-h-full max-lg:tw-h-max tw-w-max tw-gap-5 tw-text-base max-lg:tw-mt-[30px] max-lg:tw-flex-col 
+                                max-lg:tw-gap-5 lg:tw-mx-auto tw-place-items-center"
+                >
+                    <a class="header-links" href="#features" onclick="event.preventDefault(); document.querySelector('#aboutly').scrollIntoView({ behavior: 'smooth' });">Features</a>
+                    <a class="header-links" href="#preview" onclick="event.preventDefault(); document.querySelector('#dashboard-container').scrollIntoView({ behavior: 'smooth' });">Preview</a>
+                    <a class="header-links" href="#contact">Contact</a>
+                    
+                </nav>
+                <div
+                    class="lg:tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full 
+                            max-md:tw-flex-col max-md:tw-place-content-center"
+                >
+                    <button type="button" onclick="toggleMode()" class="header-links tw-text-gray-600 dark:tw-text-gray-300" title="toggle-theme" 
+                            id="theme-toggle"> 
+                        <i class="bi bi-sun" id="toggle-mode-icon"></i>
+                    </button>
+                    <a
+                        href="#"
+                        aria-label="Try Pixa Playground"
+                        class="btn tw-flex tw-gap-3 tw-px-3 tw-py-2 tw-transition-transform 
+                                    tw-duration-[0.3s] hover:tw-translate-x-2"
+                    >
+                        <span>Log In</span>
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <button
+                class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-gray-500 lg:tw-hidden"
+                onclick="toggleHeader()"
+                aria-label="menu"
+                id="collapse-btn"
+            ></button>
+        </header>
+
+        <section
+            class="hero-section tw-relative tw-mt-20 tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden max-lg:tw-mt-[100px]"
+            id="hero-section"
+        >
+
+            <!-- video container -->
+            <div class="tw-fixed tw-bg-[#000000af] dark:tw-bg-[#80808085] tw-top-0 tw-left-1/2 tw--translate-x-1/2 tw-z-20 tw-transition-opacity
+                tw-duration-300 tw-scale-0 tw-opacity-0 tw-p-2
+                tw-w-full tw-h-full tw-flex tw-place-content-center tw-place-items-center" id="video-container-bg">
+
+                <div class="tw-max-w-[80vw] max-lg:tw-max-w-full max-lg:tw-w-full tw-scale-0 tw-transition-transform tw-duration-500 tw-p-6 tw-rounded-xl  max-lg:tw-px-2 tw-w-full tw-gap-2 tw-shadow-md 
+                            tw-h-[90vh] max-lg:tw-h-auto max-lg:tw-min-h-[400px] tw-bg-white dark:tw-bg-[#16171A] tw-max-h-full
+                            " id="video-container">
+                    <div class="tw-w-full tw-flex">
+                        <button type="button" onclick="closeVideo()" class="tw-ml-auto tw-text-xl" title="close">
+                            <i class="bi bi-x-circle-fill"></i>
+                        </button>
+                    </div>
+                    <div class="tw-flex tw-w-full  tw-rounded-xl tw-px-[5%] max-md:tw-px-2 tw-min-h-[300px] tw-max-h-[90%] tw-h-full">
+
+                        <div class="tw-relative tw-bg-black tw-min-w-full tw-min-h-full tw-overflow-clip tw-rounded-md">
+                            <!-- add your youtube video link here -->
+                            <iframe class="tw-absolute tw-top-[50%] tw--translate-y-[50%] tw-left-[50%] tw--translate-x-[50%] tw-w-full tw-h-full" 
+                                src="https://www.youtube.com/embed/l5JG7HONHA4?si=6Rouv7ZSW1wnktpc&hd=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+        
+                    </div>
+                </div>  
+            </div>
+
+            <div    
+                class="hero-bg-gradient tw-relative tw-flex tw-h-full tw-min-h-[100vh] tw-w-full tw-flex-col tw-place-content-center tw-gap-6 tw-p-[5%] max-xl:tw-place-items-center max-lg:tw-p-4"
+            >
+
+                <div class="purple-bg-grad  reveal-up tw-absolute tw-left-1/2 tw--translate-1/2 tw-top-[10%] tw-h-[120px] tw-w-[120px]"
+                ></div> 
+
+                <div
+                    class="tw-flex tw-flex-col tw-min-h-[60vh] tw-place-content-center tw-items-center"
+                >
+                    <h2
+                        class="reveal-up tw-text-center tw-text-7xl tw-font-semibold tw-uppercase tw-leading-[90px] max-lg:tw-text-4xl max-md:tw-leading-snug"
+                    >
+                        <span>AI-Powered Lead Generation</span>
+                        <br />
+                        <span class="tw-font-thin tw-font-serif">that actually converts</span>
+                    </h2>
+                    <div
+                        class="reveal-up tw-mt-8 tw-max-w-[450px] tw-text-lg max-lg:tw-text-base tw-p-2 tw-text-center
+                         tw-text-gray-800 dark:tw-text-white max-lg:tw-max-w-full"
+                    >
+                        Automate your B2B sales pipeline with AI. From lead research to qualification, cold calling to follow-ups - all powered by advanced AI.
+                    </div>
+
+                    <div
+                        class="reveal-up tw-mt-10 max-md:tw-flex-col tw-flex tw-place-items-center tw-gap-4"
+                    >
+
+                        <button onclick="openVideo()"
+                            class="btn !tw-w-[170px] max-lg:!tw-w-[160px] !tw-rounded-xl !tw-py-4 max-lg:!tw-py-2 tw-flex tw-gap-2 tw-group !tw-bg-transparent !tw-text-black dark:!tw-text-white tw-transition-colors 
+                                        tw-duration-[0.3s] tw-border-[1px] tw-border-black dark:tw-border-white"
+                        >
+                            
+                            <div class="tw-relative tw-flex tw-place-items-center tw-place-content-center tw-w-6 tw-h-6">
+                                <div class="tw-absolute tw-inset-0 tw-top-0 tw-left-0 tw-scale-0 tw-duration-300 group-hover:tw-scale-100 tw-border-2
+                                             tw-border-gray-600 dark:tw-border-gray-200 tw-rounded-full tw-w-full tw-h-full"></div>
+                                <span class="bi bi-play-circle-fill"></span>
+                            </div>
+                            <span>Watch video</span>
+                        </button>
+
+                        <a
+                            class="btn tw-group max-lg:!tw-w-[160px] tw-flex tw-gap-2 tw-shadow-lg !tw-w-[170px] !tw-rounded-xl !tw-py-4 max-lg:!tw-py-2 tw-transition-transform tw-duration-[0.3s] hover:tw-scale-x-[1.03]"
+                            href="#"
+                        >
+                            <span>Get started</span>
+                            <i class="bi bi-arrow-right group-hover:tw-translate-x-1 tw-duration-300"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+                
+                <!-- prompt container -->
+                <div
+                    class="tw-relative tw-mt-8 tw-flex tw-w-full tw-place-content-center tw-place-items-center tw-perspective-none"
+                    id="dashboard-container"
+                >
+                    <div class="purple-bg-grad tw-absolute tw-left-1/2 tw--translate-x-1/2 tw-top-[5%] tw-h-[200px] tw-w-[200px]"
+                    ></div>    
+
+                    <div
+                        class="tw-relative tw-max-w-[80%] tw-bg-white dark:tw-bg-black tw-border-[1px] dark:tw-border-[#36393c] lg:tw-w-[1024px]
+                                lg:tw-h-[650px] tw-flex tw-shadow-xl max-lg:tw-h-[450px] max-lg:tw-w-full
+                                tw-overflow-hidden tw-transform-none tw-perspective-none tw-rotate-0
+                                tw-min-w-[320px] md:tw-w-full tw-min-h-[450px] tw-rounded-xl tw-bg-transparent max-md:tw-max-w-full"
+                        style="transform: none !important;"
+                        id="dashboard"
+                    >  
+                        <div class="tw-w-full tw-h-full tw-flex tw-justify-center tw-items-center tw-p-4 tw-transform-none">
+                            <img src="./assets/images/home/previewlead.gif" alt="Product Demo" class="tw-w-full tw-h-full tw-object-contain tw-rounded-lg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden"
+        >   
+
+
+            
+
+        <!-- Features section -->
+        <section id="aboutly" class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden">   
+            <div class="tw-w-full tw-place-content-center tw-items-center tw-flex tw-flex-col tw-max-w-[900px] tw-gap-4 tw-p-4">
+                <h2 class="reveal-up tw-text-6xl max-lg:tw-text-4xl tw-text-center tw-leading-normal tw-uppercase">
+                    <span class="tw-font-semibold">Work Smarter</span>
+                    <br>
+                    <span class="tw-font-serif">Not Harder</span>
+                </h2>
+                <p class="reveal-up tw-mt-8 tw-max-w-[650px] tw-text-gray-900 dark:tw-text-gray-200 tw-text-center max-md:tw-text-sm">   
+                    Omniscouts leverage <strong>advanced AI</strong> and <strong>unstructured web data</strong> to automate the most time-consuming parts of B2B sales, 
+                    letting sales reps focus on what matters most—<strong>building relationships</strong> and <strong>closing deals.</strong>
+                </p>
+            </div>
+
+            <!-- Feature Cards -->
+            <div class="tw-mt-6 tw-flex tw-flex-col tw-max-w-[1150px] max-lg:tw-max-w-full tw-h-full tw-p-4 tw-gap-8">   
+                <div class="max-xl:tw-flex max-xl:tw-flex-col tw-place-items-center tw-grid tw-grid-cols-3 tw-gap-8 tw-place-content-center">
+                    
+                    <!-- Web Data Mining -->
+                    <div class="reveal-up tw-w-[350px] tw-h-[540px] tw-flex max-md:tw-w-full">
+                        <a href="#" class="tw-relative tw-p-10 tw-transition-all tw-duration-300 tw-group/card tw-gap-5 tw-flex 
+                            tw-flex-col tw-w-full tw-h-full tw-bg-[#f6f7fb] dark:tw-bg-[#171717] tw-rounded-3xl hover:tw-scale-[1.02]">
+                            <div class="tw-w-full tw-min-h-[180px] tw-h-[180px] tw-overflow-hidden">
+                                <i class="bi bi-database-fill tw-text-6xl"></i>
+                            </div>
+                            <h2 class="tw-text-3xl max-md:tw-text-2xl tw-font-medium">Intelligent Data Mining</h2>
+                            <p class="tw-leading-normal tw-text-gray-800 dark:tw-text-gray-200">
+                                Our AI scans millions of web pages, social profiles, and company data to find perfect-fit prospects. 
+                                We extract and structure data from any source to build comprehensive lead profiles.
+                            </p>
+                        </a>
+                    </div>
+
+                    <!-- AI Qualification -->
+                    <div class="reveal-up tw-w-[350px] tw-h-[540px] tw-flex max-md:tw-w-full">
+                        <a href="#" class="tw-relative tw-p-10 tw-transition-all tw-duration-300 tw-group/card tw-gap-5 tw-flex 
+                            tw-flex-col tw-w-full tw-h-full tw-bg-[#f6f7fb] dark:tw-bg-[#171717] tw-rounded-3xl hover:tw-scale-[1.02]">
+                            <div class="tw-w-full tw-min-h-[180px] tw-h-[180px] tw-overflow-hidden">
+                                <i class="bi bi-check-circle-fill tw-text-6xl"></i>
+                            </div>
+                            <h2 class="tw-text-3xl max-md:tw-text-2xl tw-font-medium">Smart Qualification</h2>
+                            <p class="tw-leading-normal tw-text-gray-800 dark:tw-text-gray-200">
+                                Use AI to analyze buying signals, company data, and engagement patterns to automatically 
+                                score and qualify leads. Stop wasting time on poor-fit prospects.
+                            </p>
+                        </a>
+                    </div>
+
+                    <!-- Automated Outreach -->
+                    <div class="reveal-up tw-w-[350px] tw-h-[540px] tw-flex max-md:tw-w-full">
+                        <a href="#" class="tw-relative tw-p-10 tw-transition-all tw-duration-300 tw-group/card tw-gap-5 tw-flex 
+                            tw-flex-col tw-w-full tw-h-full tw-bg-[#f6f7fb] dark:tw-bg-[#171717] tw-rounded-3xl hover:tw-scale-[1.02]">
+                            <div class="tw-w-full tw-min-h-[180px] tw-h-[180px] tw-overflow-hidden">
+                                <i class="bi bi-telephone-outbound-fill tw-text-6xl"></i>
+                            </div>
+                            <h2 class="tw-text-3xl max-md:tw-text-2xl tw-font-medium">AI Outreach</h2>
+                            <p class="tw-leading-normal tw-text-gray-800 dark:tw-text-gray-200">
+                                Let AI handle cold calls and emails with human-like conversations. Our models personalize each 
+                                interaction and automatically qualify leads through natural dialogue.
+                            </p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sales Rep Dashboard -->
+                <div class="reveal-up tw-w-full md:tw-h-[350px] max-md:tw-min-h-[350px] tw-flex">
+                    <a href="#" class="tw-relative tw-p-10 tw-transition-all tw-duration-300 tw-group/card tw-gap-5 tw-flex 
+                        max-md:tw-flex-col tw-w-full tw-h-full tw-bg-[#f6f7fb] dark:tw-bg-[#171717] tw-rounded-3xl hover:tw-scale-[1.02]">
+                        <div class="tw-text-6xl tw-overflow-hidden tw-rounded-xl tw-w-full tw-h-full max-md:tw-h-[180px]">
+                            <img src="./assets/images/home/dashboard.png" class="tw-w-full tw-object-contain tw-h-full" alt="Sales Dashboard">
+                        </div>
+                        <div class="tw-flex tw-flex-col tw-gap-4">
+                            <h2 class="tw-text-3xl max-md:tw-text-2xl tw-font-medium">Unified Sales Dashboard</h2>
+                            <p class="tw-leading-normal tw-text-gray-800 dark:tw-text-gray-200">
+                                One dashboard to manage everything. Track lead status, monitor AI interactions, and get actionable insights. 
+                                Omniscouts handle the grunt work so you can focus on closing deals.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        
+    </body>
+    <footer class="tw-bg-gray-800 tw-text-white tw-p-4 tw-text-center">
+        <p class="tw-m-0">© 2024 Omniscouts. All rights reserved.</p>
+    </footer>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"
+        integrity="sha512-B1lby8cGcAUU3GR+Fd809/ZxgHbfwJMp0jLTVfHiArTuUt++VqSlJpaJvhNtRf3NERaxDNmmxkdx2o+aHd4bvw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"
+        integrity="sha512-AY2+JxnBETJ0wcXnLPCcZJIJx0eimyhz3OJ55k2Jx4RtYC+XdIi2VtJQ+tP3BaTst4otlGG1TtPJ9fKrAUnRdQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js" integrity="sha512-hIlMpy2enepx9maXZF1gn0hsvPLerXoLHdb095CmRY5HG3bZfN7XPBZ14g+TUDH1aGgfLyPHmY9/zuU53smuMw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="./scripts/components.js"></script>
+    <script src="./index.js"></script>
+
+    <!-- By Paul: https://github.com/PaulleDemon -->
+</html>
